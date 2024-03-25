@@ -33,7 +33,7 @@ Answer:"""
 
 def init_page() -> None:
     st.set_page_config(
-        page_title="Personal ChatGPT"
+        page_title="StepsAI Chatbot"
     )
     st.sidebar.title("Options")
 
