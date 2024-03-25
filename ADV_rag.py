@@ -11,7 +11,7 @@ from llama_index.vector_stores.weaviate import WeaviateVectorStore
 from llama_index.core.node_parser import SentenceWindowNodeParser
 from llama_index.core.postprocessor import MetadataReplacementPostProcessor
 from llama_index.core.postprocessor import SentenceTransformerRerank
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 Settings.llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1)
 Settings.embed_model = OpenAIEmbedding()
 
