@@ -114,12 +114,20 @@ class Chatbot:
         # Initialize session state for messages and model
         if "messages" not in st.session_state:
             st.session_state.messages = []
-            st.session_state.messages.append({"role": "system", "content": ""}) # -------> write your system mesage here !!!
+            st.session_state.messages.append({"role": "system", "content": "You are a helpful AI QA assistant. "
+                    "When answering questions, use the context enclosed by triple backquotes if it is relevant. "
+                    "If you don't know the answer, just say that you don't know, "
+                    "don't try to make up an answer. "
+                    "Reply your answer in mardkown format."}) # -------> write your system mesage here !!!
             response_initial = openai.ChatCompletion.create(
             model= "gpt-3.5-turbo-1106",
             #response_format={ "type": "json_object" },
             messages=[
-                {"role": "system", "content": ""}, # -------> write your system mesage here !!!
+                {"role": "system", "content": "You are a helpful AI QA assistant. "
+                    "When answering questions, use the context enclosed by triple backquotes if it is relevant. "
+                    "If you don't know the answer, just say that you don't know, "
+                    "don't try to make up an answer. "
+                    "Reply your answer in mardkown format."}, # -------> write your system mesage here !!!
                 {"role": "user", "content": "Hi !"}
             ]
             )
